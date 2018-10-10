@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LlV-bz-gfx">
+                                <rect key="frame" x="107.5" y="176" width="199" height="198.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LlV-bz-gfx" secondAttribute="height" multiplier="1:1" id="8A8-zK-q7D"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThC-RB-sOc">
+                                <rect key="frame" x="104" y="404.5" width="206" height="47"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="ThC-RB-sOc" firstAttribute="centerX" secondItem="LlV-bz-gfx" secondAttribute="centerX" id="5Wl-GK-L1X"/>
+                            <constraint firstItem="ThC-RB-sOc" firstAttribute="top" secondItem="LlV-bz-gfx" secondAttribute="bottom" constant="30" id="7TT-lG-9B6"/>
+                            <constraint firstItem="LlV-bz-gfx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="45:203" id="Jjf-GI-ms0"/>
+                            <constraint firstItem="LlV-bz-gfx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="4" id="R2N-fP-ek7"/>
+                            <constraint firstItem="LlV-bz-gfx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oSz-vv-Ist"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
