@@ -12,6 +12,10 @@ class HomeViewController: BaseViewController {
 
     @IBOutlet weak var tblView: UITableView!
     
+    var searchResult = [Annotation]()
+    var searchKeyword : String?
+    var isSearchModeOn = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
