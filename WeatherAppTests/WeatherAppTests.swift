@@ -30,5 +30,16 @@ class WeatherAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testForcastAPI() -> Void {
+        let expectation = XCTestExpectation(description: "Wait for forecast call to complete.")
+        NetworkService.shared.callService(NetworkService.shared.serviceProvider, type: ServiceProvider.todaysWeather(params: ["lat":0.0,"lon":0.0]), success: { (result: WeatherModel) in
+            expectation.fulfill()
+            XCTAssertTrue(true, "Today's weather getting : Call Valid")
+        }) { (error) in
+            expectation.fulfill()
+            XCTAssertFalse(false, "\(error.localizedDescription)")
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 }

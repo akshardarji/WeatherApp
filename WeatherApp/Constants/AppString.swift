@@ -22,6 +22,7 @@ struct AppString {
     static let foreCastWeatherStatusMsg = "Fetching forecasting weather"
     static let bookmarkLocation = "Do you wants to bookmark this location?"
     static let locationNotFound = "Location not found. Please try again"
+    static let resetBookmark = "Do you really wants reset bookmarks?"
     static let Okay = "Okay"
     static let Cancel = "Cancel"
 }

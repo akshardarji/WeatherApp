@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SettingsViewController: BaseViewController {
 
@@ -26,7 +27,6 @@ class SettingsViewController: BaseViewController {
             }
             
         }
-        
     }
     @IBAction func tempUnitChanged(_ sender: Any) {
         func setUserDefaultValueForTemp(unit:TempratureUnit) {
@@ -45,8 +45,28 @@ class SettingsViewController: BaseViewController {
         
     }
     @IBAction func resetBookmarksAction(_ sender: Any) {
-        WeatherUtility.shared.showAlertViewController(title: "", message: "Do you really wants reset bookmarks?", okayCallBack: {
+        WeatherUtility.shared.showAlertViewController(title: "", message: AppString.resetBookmark, okayCallBack: {
             DataManager.shared.ResetData()
         }, cancelCallBack: nil)
+    }
+    
+    @IBAction func helpAndSupportAction(_ sender: Any) {
+        openHelpDeskView()
+    }
+}
+
+extension SettingsViewController: SFSafariViewControllerDelegate {
+    
+    func openHelpDeskView() {
+        
+        // On the place of creating html file just putting here "https://www.google.com"
+        
+        let safariVC = SFSafariViewController(url: NSURL(string: "https://www.google.com")! as URL)
+        self.present(safariVC, animated: true, completion: nil)
+        safariVC.delegate = self
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
